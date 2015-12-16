@@ -1,0 +1,138 @@
+<div class="small-container">
+        <a href="#" class="btn btn-primary" data-target="#add-country-modal" data-toggle="modal">Add Country</a>
+</div>
+<div class="container margin-top-20">
+
+    <table class="table striped">
+        <thead>
+        <th></th>
+        <th>ISO Code</th>
+        <th>Country</th>
+        <th>Tax regime</th>
+        <th>Taulia Compliante</th>
+        <th>Action</th>
+        </thead>
+
+        <tbody>
+        <% @country.each do |country| %>
+            <tr>
+                <td>
+                    <img src="<%= country.country_flag %>" class="img-responsive flag-list" />
+                </td>
+                <td>
+                    <%= country.iso_code %>
+                </td>
+                <td>
+                    <%= country.name_en %>
+                </td>
+                <td>
+                    <%= country.regime_type %>
+                </td>
+                <td>
+                    <%= country.taulia_compliante %>
+                </td>
+                <td>
+                    <a href="/country/<%= country.id %>" class="btn btn-primary">More Detail</a>
+                </td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+</div>
+
+<%= form_for @new_country, url: country_index_path do |country| %>
+    <div id="add-country-modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Add a Country</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="bold">
+                        ISO Code
+                    </div>
+                    <div class="margin-top-20">
+                        <%= country.text_field(:iso_code, class: "form-control") %>
+                    </div>
+                    <div class="bold">
+                        Country Flag
+                    </div>
+                    <div class="margin-top-20">
+                        <%= country.text_field(:country_flag, class: "form-control") %>
+                    </div>
+                    <div class="bold margin-top-20">
+                        Name (EN)
+                    </div>
+                    <div class="margin-top-20">
+                        <%= country.text_field(:name_en, class: "form-control") %>
+                    </div>
+                    <div class="bold margin-top-20">
+                        Name (local)
+                    </div>
+                    <div class="margin-top-20">
+                        <%= country.text_field(:name_local, class: "form-control") %>
+                    </div>
+                    <div class="bold margin-top-20">
+                        Tax Regime
+                    </div>
+                    <div class="margin-top-20">
+                        <%= country.text_field(:regime_type, class: "form-control") %>
+                    </div>
+                    <div class="bold margin-top-20">
+                        Digitally sign & validate e-Invoices:
+                    </div>
+                    <div class="margin-top-20">
+                        <%= country.text_field(:signed_validated, class: "form-control") %>
+                    </div>
+                    <div class="bold margin-top-20">
+                        Compliance footer:
+                    </div>
+                    <div class="margin-top-20">
+                        <%= country.text_field(:compliance_footer, class: "form-control") %>
+                    </div>
+                    <div class="bold margin-top-20">
+                        Footer note:
+                    </div>
+                    <div class="margin-top-20">
+                        <%= country.text_field(:footer_note, class: "form-control") %>
+                    </div>
+                    <div class="bold margin-top-20">
+                        Archiving in Trustweaver:
+                    </div>
+                    <div class="margin-top-20">
+                        <%= country.text_field(:archv_tw, class: "form-control") %>
+                    </div>
+                    <div class="bold margin-top-20">
+                        Taulia PDF:
+                    </div>
+                    <div class="margin-top-20">
+                        <%= country.text_field(:taulia_pdf, class: "form-control") %>
+                    </div>
+                    <div class="bold margin-top-20">
+                        Supplier responsibilities:
+                    </div>
+                    <div class="margin-top-20">
+                        <%= country.text_area(:suppliers_responsibilities, class: "form-control") %>
+                    </div>
+                    <div class="bold margin-top-20">
+                        Buyer responsibilities:
+                    </div>
+                    <div class="margin-top-20">
+                        <%= country.text_area(:buyer_responsibilities, class: "form-control") %>
+                    </div>
+                    <div class="bold margin-top-20">
+                        Taulia Compliante:
+                    </div>
+                    <div class="margin-top-20">
+                        <%= country.text_field(:taulia_compliante, class: "form-control") %>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+<%end%>

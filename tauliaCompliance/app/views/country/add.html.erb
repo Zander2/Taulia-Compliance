@@ -1,0 +1,43 @@
+<div class="small-container">
+    <h1>User Database</h1>
+
+    <div>
+        <a href="/users" class="btn btn-primary">Back</a>
+    </div>
+</div>
+
+<%= form_for(@country, method: "PUT") do |country| %>
+<div class="small-container margin-top-20">
+    <div class="well">
+        <div class="bold">
+            Name
+        </div>
+        <div class="margin-top-20">
+            <%= user.text_field(:firstname, class: "form-control") %>
+                </div>
+                <div class="bold margin-top-20">
+                    Last Name
+                </div>
+                <div class="margin-top-20">
+                    <%= user.text_field(:lastname, class: "form-control") %>
+                        </div>
+                        <div class="bold margin-top-20">
+                            Username
+                        </div>
+                        <div class="margin-top-20">
+                            <%= user.text_field(:username, class: "form-control") %>
+                                </div>
+                                <div class="bold margin-top-20">
+                                    Role
+                                </div>
+                                <div class="margin-top-20">
+                                    <%= user.text_field(:role, class: "form-control") %>
+                                        </div>
+                                        <div class="margin-top-20 txt-right">
+                                            <a href="/users" class="btn btn-default">Cancel</a>
+                                            <%= user.submit class: "btn btn-primary", value: "Save" %>
+                                                <%= user.submit class: "btn btn-primary", value: "Delete" %>
+                                                    </div>
+                                                <%end%>
+                                                </div>
+                                                </div>

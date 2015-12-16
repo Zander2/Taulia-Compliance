@@ -1,0 +1,349 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/****************************************
+*** GENERAL
+*****************************************/
+
+
+body{
+  font-family: 'museo-sans','open sans', sans-serif;
+  margin: 0;
+  width: 100%;
+  padding-top: 80px;
+  margin-top: 80px;
+  background: transparent;
+  overflow: visible;
+  //position: absolute;
+  .glyphicon-barcode:before {
+    content: "\e040";
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 2em;
+  margin: 0;
+}
+
+h4 {
+  font-size: 0.75em;
+  margin: 0 0 0 1em;
+}
+
+h5 {
+  font-size: 0.75em;
+  margin: 5px 0 15px 0;
+}
+
+.search input {
+  max-width: 200px;
+}
+
+.search {
+  width: 0px;
+  margin: 10px auto;
+}
+
+/****************************************
+*** HEADING
+*****************************************/
+
+
+
+h1 {
+  margin: 15px 0;
+  font-size: 1.75em;
+  font-weight: normal;
+  line-height: 0.8em;
+}
+
+h2 {
+  font-size: 0.75em;
+  margin: -5px 0 0;
+  font-weight: normal;
+}
+
+
+
+/****************************************
+*** NAVIGATION
+*****************************************/
+.img-logo {
+  height: 30px;
+  background-size:auto;
+}
+.site-nav {
+  text-align: center;
+  padding: 10px 0;
+  margin: 20px 0 0;
+  border-width: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255,255,255,0.3);
+  //overflow: visible;
+  //position: inherit;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0 10px;
+  padding: 0;
+}
+
+.site-nav li {
+  display: inline-block;
+}
+
+.site-nav a {
+  font-weight: 800;
+  padding:  15px 10px;
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.navbar-toggle:focus {
+  outline: 0;
+}
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+/****************************************
+*** FOOTER
+*****************************************/
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  clear: both;
+  padding: 5px 0px;
+  width: 100%;
+}
+
+footer ul li {
+  display: inline-block;
+  /*float: left;*/
+}
+
+/****************************************
+*** WELCOME
+*****************************************/
+
+.welcome {
+  background: url("/assets/bg-welcome");
+  background-repeat: repeat no-repeat;
+  background-position: center, center, center, center;
+  //background-position: absolute;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  //background-attachment: scroll;
+  background-size: cover, auto;
+  padding-top: 300px;
+  //position: fixed;
+  //height: auto !important;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  //position: absolute;
+
+}
+
+.welcome h3 {
+  text-align: center;
+  //position: inherit;
+
+}
+
+.nice {
+  text-align: center;
+  color: #ffffff;
+}
+
+.foundation {
+  margin: 30px auto;
+  padding: 0 5%;
+  height: auto;
+
+}
+
+.pillars {
+  list-style: none;
+}
+
+.pillars li {
+  float: left;
+  width: 90%;
+  margin: 2.5%;
+  color: #bdc3c7;
+}
+
+.pillars li div a {
+  text-align: center;
+  width: 30%;
+  margin: 5% 0px;
+}
+
+.data_validation {
+  margin: 0px 0px;
+  background-position: center;
+}
+
+.data_header {
+  background: #46708a;
+  text-align: center;
+  padding: 5px 0px;
+  color: #ffffff;
+}
+
+.auth_header {
+  background: #45C1A4;
+  text-align: center;
+  padding: 5px 0px;
+  color: #ffffff;
+}
+
+.arch_header {
+  background: #F0C424;
+  text-align: center;
+  padding: 5px 0px;
+  color: #ffffff;
+}
+
+.table {
+  max-width: 100%;
+  margin: 5px auto;
+  background-color: #f5f5f5;
+  list-style: none;
+}
+
+.data {
+  background: #46708a;
+  background-image: url(/assets/data);
+
+}
+
+.auth {
+  background: #45C1A4;
+  background-image: url(/assets/lock);
+
+}
+
+.arch {
+  background: #F0C424;
+  background-image: url(/assets/archive);
+
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+  border-radius: 20% 5%;
+  border: 0;
+  margin: 0px auto;
+  padding: 5px 0;
+  height: 100px; /* Visible height */
+  width: 120px; /* Visible width */
+}
+
+.overview {
+  padding: 5px 5px;
+  display: list-item;
+  list-style: disc inside;
+}
+/****************************************
+*** Country Overview
+*****************************************/
+.flag-list {
+  max-width: 20px;
+}
+/****************************************
+*** Country EDIT
+*****************************************/
+.flag {
+  max-width: 100px;
+}
+/****************************************
+*** Color
+*****************************************/
+/* Header Green  */
+header {
+  background: transparent;
+}
+/* Site Body */
+body {
+  color: #999;
+}
+nav {
+  background: #213c47;
+  color: #999b9c;
+}
+footer {
+  background: #213c47;
+  color: #fff;
+}
+
+/* Logo text */
+h1, h2 {
+  color: #fff;
+}
+
+h5 {
+  color: #999
+}
+
+/* Navigation background on mobile
+nav:hover {
+    background: rgba(50,60,71,0.5);
+} */
+
+.navbar-brand {
+  color: #fff;
+}
+
+.navbar-inverse {
+  background: #213c47;
+  color: #fff;
+}
+
+a {
+  color: #004f6d;
+}
+
+.dropdown-toggle {
+  color: #fff;
+}
+
+/* Selected links */
+nav a.selected, nav a:hover {
+  color: #004f6d;
+}
+.country-title {
+  color: #999b9c;
+}
+

@@ -1,0 +1,53 @@
+<div class="small-container">
+    <h1 class="country-title">Country: <%= @country.name_en %></h1>
+        <img src="<%= @country.country_flag %>" class="img-responsive flag" />
+    <div class="margin-top-10">
+        <a href="/country" class="btn btn-primary">Back</a>
+        <a href="/country/<%= @country.id %>/edit" class="btn btn-primary">Edit Country</a>
+        <%= link_to "Delete", country_path(@country.id), method: "DELETE", class: "btn btn-primary"%>
+    </div>
+</div>
+
+
+<div class="small-container margin-top-20">
+
+        Country Details:
+    <div class="well">
+        <div class="bold">
+            ISO Code: <%= @country.iso_code %>
+        </div>
+        <div class="margin-top-20">
+            Name (EN): <%= @country.name_en %>
+        </div>
+        <div class="margin-top-20">
+            Name (local): <%= @country.name_local %>
+        </div>
+        <div class="margin-top-20">
+            Tax regime: <%= @country.regime_type %>
+        </div>
+        <div class="margin-top-20">
+            Digitally sign & validate e-Invoices: <%= @country.signed_validated %>
+        </div>
+        <div class="margin-top-20">
+            Compliance footer: <%= @country.compliance_footer %>
+        </div>
+        <div class="margin-top-20">
+            Footer note: <%= @country.footer_note %>
+        </div>
+        <div class="margin-top-20">
+            Archiving in Trustweaver: <%= @country.archv_tw %>
+        </div>
+        <div class="margin-top-20">
+            Taulia PDF: <%= @country.taulia_pdf %>
+        </div>
+        <div class="margin-top-20">
+            Supplier responsibilities: <%= @country.suppliers_responsibilities %>
+        </div>
+        <div class="margin-top-20">
+            Buyer responsibilities: <%= @country.buyer_responsibilities %>
+        </div>
+        <div class="margin-top-20">
+            Taulia Compliante: <%= @country.taulia_compliante %>
+        </div>
+    </div>
+</div>

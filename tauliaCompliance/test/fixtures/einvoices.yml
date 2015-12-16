@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  country_id: 1
+  regime_id: 1
+  signed_validated: MyString
+  compliance_footer: MyString
+  footer_note: MyString
+  archv_tw: MyString
+  taulia_pdf: MyString
+  suppliers_responsibilities: MyText
+  buyer_responsibilities: MyText
+
+two:
+  country_id: 1
+  regime_id: 1
+  signed_validated: MyString
+  compliance_footer: MyString
+  footer_note: MyString
+  archv_tw: MyString
+  taulia_pdf: MyString
+  suppliers_responsibilities: MyText
+  buyer_responsibilities: MyText
